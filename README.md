@@ -9,7 +9,12 @@ The folders contain
 
 * Videos: A series of videos on the molecular dynamics software (molsim) used in
   the book. This includes an installation guide and simulation of simple
-  systems.
+  systems. I recommend you see the videos in the following order
+  
+  1: INSTALL
+  2: SIMPLE
+  3: INTERFACE
+  4: MOLECULES
  
 * Code: Molecular dynamics and data analysis code that can help you investigate
   the research questions proposed in the book's "Further Explorations". Notice
