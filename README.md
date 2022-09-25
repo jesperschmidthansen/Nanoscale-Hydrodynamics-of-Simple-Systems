@@ -1,5 +1,5 @@
 
-**** UNDER CONSTRUCTION! **** 
+**** UNDER CONSTRUCTION! (exptected release 29/9)**** 
 
 In this repository you will find additional resources for the book
 "Nanoscale Hydrodynamics of Simple Systems" by J.S. Hansen (Cambridge University
@@ -12,8 +12,11 @@ The folders contain
   systems. I recommend you see the videos in the following order
   
   1: INSTALL
+  
   2: SIMPLE
+  
   3: INTERFACE
+  
   4: MOLECULES
  
 * Code: Molecular dynamics and data analysis code that can help you investigate
