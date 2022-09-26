@@ -12,6 +12,9 @@
 %% descriptive statistics
 %%
 %% Tested with molsim 0.9.5 under GNU Octave 7.2.0 and Matlab R2020b
+%%
+%% NOTE: Under some GNU Octave versions the work space must be restarted after
+%% each simulation
 %%%%
 
 clear all
