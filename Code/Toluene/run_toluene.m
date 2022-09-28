@@ -38,12 +38,12 @@ angleconstant = 1173;
 torsionparam_0 = [0.0, 133.0, 0.0 0.0 0.0];
 torsionparam_1 = [0.0, -133.0, 0.0 0.0 0.0];
 
-%% Set misc.
+%% Set temp, remove intra-molecular pair-interaction etc
 molsim('set','timestep', dt);
 molsim('set', 'temperature', temp0);
 molsim('set', 'exclusion', 'molecule');
 
-%% Load positions, set temp, remove intra-molecular pair-interaction etc
+%% Load positions and top file 
 molsim('load', 'xyz', 'start_toluene.xyz');
 molsim('load', 'top', 'start_toluene.top');
 
