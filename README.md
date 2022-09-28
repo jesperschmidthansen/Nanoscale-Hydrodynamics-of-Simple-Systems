@@ -1,6 +1,4 @@
 
-**** UNDER CONSTRUCTION! (exptected release 29/9)**** 
-
 In this repository you will find additional resources for the book
 "Nanoscale Hydrodynamics of Simple Systems" by J.S. Hansen (Cambridge University
 Press, 2022).
