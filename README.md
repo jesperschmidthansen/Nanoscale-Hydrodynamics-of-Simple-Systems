@@ -25,7 +25,8 @@ Press, 2022).
  </li>
  <li>
  Help: Here you can find the molsim tutorial as well as data and plots to some
-  of the "Further Explorations".
+  of the "Further Explorations". Moreover, the book addendum is located here; I hope this can help
+  the reader.
 </li>  
 <li> Erratum: A list of the book's errata.</li>
 </ul>
