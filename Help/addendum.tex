@@ -1,16 +1,156 @@
 \documentclass[11pt]{article}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+ 
+\renewcommand{\vec}{\mathbf}
+\renewcommand{\matrix}{\mathbf}
+\newcommand{\tensor}{\mathbf}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\vecs}{\boldsymbol}
+\newcommand{\diff}{\mathcal{D}}
+
 \date{}
 \author{J.S. Hansen}
-\title{Addendum to \\ "Nanscale Hydrodynamics of Simple Systems"}
+\title{Addendum to \\ "Nanoscale Hydrodynamics of Simple Systems"}
+
+
+
 \begin{document}
 
 \maketitle
 
-This addendum is based on some of my own notes that did not make the book as well as some newer post-publication results. I hope this can 
-be a helpful suppliment to some readers.
+\noindent This addendum is based on some of my own notes that did not make the book and some 
+additional hindsights. 
+Moreover, as I keep working in the field new results relevant for the book theme may be added. I hope this can be a helpful suppliment to the readers.
 
-\subsection*{The relation between angular velocity and vorticity}
-\subsection*{Shear waves: A straightforward derivation}
-\subsection*{On the perturbation analysis of mixtures in temperature gradients}
+%\subsection*{The relation between angular velocity and vorticity}
+
+%\subsection*{Thermal kinetic energy balance versus sum rules}
+
+\subsection*{On the shear waves}
+In the book the transverse velocity autocorrelation function using Maxwell's viscoelastic model is 
+derived using the linear differential operator $\mathcal{A}$. While this follows the literature and
+allows for a generalization, it is helpful to show a direct derivation where 
+the operator is not used in an abstract manner.\footnote{Thanks to Solvej for pointing this out.}  
+
+We start with the momentum balance equation, Eq. (4.3), leaving out the stochastic force term as it will eventualy vanish in the ensemble 
+averaging, 
+\begin{equation}
+	\label{eq:sw:balance}
+	\rho_\text{av} \frac{\partial \widetilde{\delta u}_x}{\partial t} = -ik_y \widetilde{P}_{yx}
+\end{equation}
+implying that
+\begin{equation}
+	\label{eq:sw:dbalance}
+	\frac{\partial \widetilde{P}_{yx}}{\partial t} = - \frac{\rho_\text{av}}{i k_y}\frac{\partial^2 \widetilde{\delta u}_x}{\partial t^2} \ .
+\end{equation}
+The symbols are defined in the book. Recall, the Maxwell model reads, Eq. (4.11) in the book,
+\begin{eqnarray}
+	ik_y \widetilde{\delta u}_x &=& - \frac{1}{\eta_0} \left(1 + \tau_M \frac{\partial}{\partial t}\right) \widetilde{P}_{yx} \\
+	&=& \frac{\rho_\text{av}}{i k_y\eta_0} \frac{\partial \widetilde{\delta u}_x}{\partial t} 
+	+ \frac{\tau_M \rho_\text{av}}{ik_y\eta_0}\frac{\partial^2\widetilde{\delta u}_x}{\partial t^2} 
+\end{eqnarray}
+by the relations Eqs. (\ref{eq:sw:balance}) and (\ref{eq:sw:dbalance}). Re-arranging we get the desired 
+result
+\begin{equation}
+	\frac{\partial^2\widetilde{\delta u}_x}{\partial t^2} + \frac{1}{\tau_M} \frac{\partial \widetilde{\delta u}_x}{\partial t} - 
+	\frac{\eta_0 k_y^2}{\tau_M \rho_\text{av}} \widetilde{\delta u}_x = 0 \ .
+\end{equation}
+This is Eq. (4.15) in the book, but again without the stochastic forcing term.
+
+\subsection*{The tricky counter-ion system}
+Section 6.2 deals with charged systems, and in 6.2.1 and 6.2.2 we investigate the 
+charge density profile near a negatively charged wall, see the geometry in Fig. 6.6. 
+Two different systems are considered, namely, an electrolyte and a counter-ion system. 
+Equation (6.66) proposes a model for the counter-ion density, denoted $n_+$ as the counter-ion is 
+a cation. As stated in the text, the counter-ion system must fullfill the properties that 
+\begin{equation}
+\label{eq:tc:n+zero}	
+	n_+ \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty
+\end{equation}
+since the total charge $A q\int_0^\infty n_+ \d z$, where $A$ is the wall surface area, cannot 
+diverge. This is in agreement with the surface charge screening effect and furthermore
+that the electric potential $\varphi$ has the property
+\begin{equation}
+\label{eq:tc:potential}
+ \varphi \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty.
+\end{equation}
+Equation (6.66) is different from an electrolyte system, Eq. (6.45) composed of both co- and 
+counter-ions which may raise confusion. Here it is shown that Eq. (6.66) can be derived from the 
+chemical potential by re-defining the ion activities for such counter-ion systems.
+
+It is, perhaps, instructive to see the standard case of the electrolyte. The chemical potential of 
+the anions and cations reads
+\begin{equation}
+	\mu_i = \mu_i^o + k_BT\ln(a_i) + q_i\varphi \, ,
+\end{equation}
+where $\mu_i^o$ can be chosen to be the reference chemical potential in bulk (i.e., sufficiently 
+far away from the wall), $a_i$ is the ion activity, and $q_i$ the ion         
+charge. Index $i$ denotes the ion type, + or -. The activity can be given in terms of the 
+density and activity coefficient $\gamma$, 
+\begin{equation}
+\label{eq:tc:activity0}
+a_i = \gamma_i \frac{n_i}{n_0} 
+\end{equation}
+where $n_0$ is here the density in bulk (this is the same for both anion and cation). In the limit 
+of small electrolyte concentrations $\gamma_i \approx 1$ and, therefore,
+\begin{equation}
+	\mu_i = \mu_i^o + k_BT\ln\left(\frac{n_i}{n_0}\right) + q_i\varphi \, .
+\end{equation}
+Notice that in bulk, $z \rightarrow \infty$, we have $n_i \rightarrow n_0$, and the second term 
+vanishes implying that the electric potential follows Eq. (\ref{eq:tc:potential}) as expected. 
+
+In the steady state $\mu_i$ is constant, and we have the relation 
+\begin{equation}
+	\frac{\partial \varphi}{\partial z} = -\frac{k_BT}{q_i}\frac{\partial}{\partial z} \ln (n_i)
+\end{equation}
+Integrating with the limit boundaries 
+\begin{equation}
+	\int_{\varphi(z)}^{\varphi(\infty)} \d \varphi = -\frac{k_BT}{q_i} \int_{n_i(z)}^{n_0} \d 
+\ln(n_i)
+\end{equation}
+by substitution gives the well-known result for the electrolyte 
+\begin{equation}
+	n_i = n_0e^{-q_i\varphi/k_BT} \, .
+\end{equation}
+
+For a counter-ion system with a negatively charged wall the cation-ion charge is  $q_+ = q > 0$. We 
+still have
+\begin{equation}
+	\mu_+ = \mu_+^o + k_BT \ln(a_+) + q\varphi \, ,
+\end{equation}
+where $\mu_+^o$ is the reference potential; here we again use the chemical potential in bulk. Now, 
+recall Eq. (\ref{eq:tc:n+zero}). This property leaves the definition Eq. (\ref{eq:tc:activity0}) 
+invalid. With the choice of reference potential we still must impose that the 
+activity is unity as $z \rightarrow \infty$ in the dilute limit. These contraints are fullfilled 
+by defining the activity as 
+\begin{equation}
+	\label{eq:tc:activity1}
+	a_+ = \gamma_+ \left(\frac{n_+ + n_*}{n_*} \right)\ ,
+\end{equation}
+where $n_*$ is some non-zero reference density (in the book denoted $n_0$). Using Eq. 
+(\ref{eq:tc:activity1}) the activity is simply understood as an "effective 
+concentration" and the definition is, clearly, not rigorously derived. Continuing, from the 
+steady-state condition we get 
+\begin{equation}
+	\frac{\partial \varphi}{\partial z} = -\frac{k_BT}{q_i}\frac{\partial}{\partial z} \ln 
+	\left( \frac{n_+ + n_*}{n_*} \right) \, ,
+\end{equation}	
+in the dilute limit. Application of the limiting boundaries 
+\begin{equation}
+	\varphi(\infty) = 0 \ \ \text{and} \ \ n_+(\infty) = 0 \ ,
+\end{equation}
+and integrating we obtain
+\begin{equation}
+	n_+ = n_*(e^{-q\varphi/k_BT} -1) \, .
+\end{equation}
+This is Eq. (6.66). 
+%\subsection*{On the perturbation analysis of mixtures in temperature gradients}
 
 \end{document}
