@@ -69,21 +69,21 @@ Section 6.2 deals with charged systems, and in 6.2.1 and 6.2.2 we investigate th
 charge density profile near a negatively charged wall, see the geometry in Fig. 6.6. 
 Two different systems are considered, namely, an electrolyte and a counter-ion system. 
 Equation (6.66) proposes a model for the counter-ion density, denoted $n_+$ as the counter-ion is 
-a cation. As stated in the text, the counter-ion system must fullfill the properties that 
+a cation. As stated in the text, the counter-ion system must fullfill that
 \begin{equation}
 \label{eq:tc:n+zero}	
 	n_+ \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty
 \end{equation}
 since the total charge $A q\int_0^\infty n_+ \d z$, where $A$ is the wall surface area, cannot 
-diverge. This is in agreement with the surface charge screening effect and furthermore
-that the electric potential $\varphi$ has the property
+diverge. This is in agreement with the surface charge screening effect. From the definition of the 
+the electric potential $\varphi$ we also have that  
 \begin{equation}
 \label{eq:tc:potential}
  \varphi \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty.
 \end{equation}
-Equation (6.66) is different from an electrolyte system, Eq. (6.45) composed of both co- and 
+Equation (6.66) is different from an electrolyte system, Eq. (6.45), composed of both co- and 
 counter-ions which may raise confusion. Here it is shown that Eq. (6.66) can be derived from the 
-chemical potential by re-defining the ion activities for such counter-ion systems.
+chemical potential by re-defining the ion activities for counter-ion systems.
 
 It is, perhaps, instructive to see the standard case of the electrolyte. The chemical potential of 
 the anions and cations reads
@@ -120,24 +120,23 @@ by substitution gives the well-known result for the electrolyte
 	n_i = n_0e^{-q_i\varphi/k_BT} \, .
 \end{equation}
 
-For a counter-ion system with a negatively charged wall the cation-ion charge is  $q_+ = q > 0$. We 
-still have
+For a counter-ion system with a negatively charged wall the cation-ion charge is  $q_+ = q > 0$. Recall 
+that the definition of the chemical potential is the partial derivative of the system free energy 
+with respect to $n_+$, thus, sufficiently far away from the wall we have $\mu_+ = 0$ due to  Eq. (\ref{eq:tc:n+zero}). 
+This property also leaves the definition of the activity Eq.(\ref{eq:tc:activity0}) invalid. We have 
 \begin{equation}
-	\mu_+ = \mu_+^o + k_BT \ln(a_+) + q\varphi \, ,
+	\mu_+ = k_BT \ln(a_+) + q\varphi \, ,
 \end{equation}
-where $\mu_+^o$ is the reference potential; here we again use the chemical potential in bulk. Now, 
-recall Eq. (\ref{eq:tc:n+zero}). This property leaves the definition Eq. (\ref{eq:tc:activity0}) 
-invalid. With the choice of reference potential we still must impose that the 
-activity is unity as $z \rightarrow \infty$ in the dilute limit. These contraints are fullfilled 
-by defining the activity as 
+We know define the activity by
 \begin{equation}
 	\label{eq:tc:activity1}
 	a_+ = \gamma_+ \left(\frac{n_+ + n_*}{n_*} \right)\ ,
 \end{equation}
 where $n_*$ is some non-zero reference density (in the book denoted $n_0$). Using Eq. 
 (\ref{eq:tc:activity1}) the activity is simply understood as an "effective 
-concentration" and the definition is, clearly, not rigorously derived. Continuing, from the 
-steady-state condition we get 
+concentration" and the definition is, clearly, not rigorously derived. The activity coefficient is 
+dependent of the reference concentration, but we still have the property that 
+$\gamma_+ \rightarrow 1$ as $n_+ \rightarrow 0$. Hence, continuing from the steady-state condition we get 
 \begin{equation}
 	\frac{\partial \varphi}{\partial z} = -\frac{k_BT}{q_i}\frac{\partial}{\partial z} \ln 
 	\left( \frac{n_+ + n_*}{n_*} \right) \, ,
