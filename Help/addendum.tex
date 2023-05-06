@@ -67,7 +67,7 @@ This is Eq. (4.15) in the book, but again without the stochastic forcing term.
 \subsection*{The tricky counter-ion system}
 Section 6.2 deals with charged systems, and in 6.2.1 and 6.2.2 we investigate the 
 charge density profile near a negatively charged wall, see the geometry in Fig. 6.6. 
-Two different systems are considered, namely, an electrolyte and a counter-ion system. 
+Two different systems are considered, namely, an electrolyte system and a counter-ion system. 
 Equation (6.66) proposes a model for the counter-ion density, denoted $n_+$ as the counter-ion is 
 a cation. As stated in the text, the counter-ion system must fullfill that
 \begin{equation}
@@ -75,12 +75,15 @@ a cation. As stated in the text, the counter-ion system must fullfill that
 	n_+ \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty
 \end{equation}
 since the total charge $A q\int_0^\infty n_+ \d z$, where $A$ is the wall surface area, cannot 
-diverge. This is in agreement with the surface charge screening effect. From the definition of the 
-the electric potential $\varphi$ we also have that  
+diverge. This is in agreement with the surface charge screening effect. Since
+the density converges to zero as $z \rightarrow \infty$, we can chose the
+reference point to be at infinite, hence, the electric potential $\varphi$ fullfils  
 \begin{equation}
 \label{eq:tc:potential}
  \varphi \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty.
 \end{equation}
+See Griffith's book \emph{Introduction to Electrodynamics}, Chapter 2.   
+
 Equation (6.66) is different from an electrolyte system, Eq. (6.45), composed of both co- and 
 counter-ions which may raise confusion. Here it is shown that Eq. (6.66) can be derived from the 
 chemical potential by re-defining the ion activities for counter-ion systems.
