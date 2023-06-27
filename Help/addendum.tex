@@ -26,8 +26,7 @@
 \maketitle
 
 \noindent This addendum is based on some of my own notes that did not make the book and some 
-additional hindsights. 
-Moreover, as I keep working in the field new results relevant for the book theme may be added. I hope this can be a helpful suppliment to the readers.
+additional hind-sights. I hope this can be a helpful supplement to the readers.
 
 %\subsection*{The relation between angular velocity and vorticity}
 
@@ -37,7 +36,7 @@ Moreover, as I keep working in the field new results relevant for the book theme
 In the book the transverse velocity autocorrelation function using Maxwell's viscoelastic model is 
 derived using the linear differential operator $\mathcal{A}$. While this follows the literature and
 allows for a generalization, it is helpful to show a direct derivation where 
-the operator is not used in an abstract manner.\footnote{Thanks to Solvej for pointing this out.}  
+the operator is not used in an abstract manner.\footnote{Thanks to Solvej for recommending this}  
 
 We start with the momentum balance equation, Eq. (4.3), leaving out the stochastic force term as it will eventualy vanish in the ensemble 
 averaging, 
@@ -63,6 +62,43 @@ result
 	\frac{\eta_0 k_y^2}{\tau_M \rho_\text{av}} \widetilde{\delta u}_x = 0 \ .
 \end{equation}
 This is Eq. (4.15) in the book, but again without the stochastic forcing term.
+
+
+\subsection*{The de Gennes order parameter}
+Equation (5.27) defines the de Gennes order parameter for three dimensions. In general dimensions it reads
+\begin{equation}
+	\label{eq:degennes}
+	S = \frac{1}{2}(D \langle \cos^2(\theta)\rangle -1) \, ,
+\end{equation}
+where $D$ is the system dimensionality, and 
+$\theta$ is the angle between the characteristic molecular vector and the wall normal vector. 
+(Not "the wall" as stated in the text - see erratum.) $S$ has the properties
+\begin{enumerate}
+\item $S=-1/2$: the molecular vectors are parallel to the wall
+\item $S= 1$: the molecular vectors are normal to the wall
+\item $S=0$: the molecular vectors are uniformly oriented. 
+\end{enumerate}
+\noindent We here prove the last property for a two dimensional system, $D=2$; the two others can be proven following the same idea. 
+
+If the molecular vector is uniformly distributed, the probability density function is 
+\begin{equation}
+	f(\theta) = \frac{2}{\pi} 1_A(\theta) \,  ,
+\end{equation}
+where $1_A$ is the indicator function on the domain $A= \{\theta : 0\leq \theta \leq \pi/2\}$. Let 
+\begin{equation} 
+	w = \cos^2 \theta \, \ \ \text{where} \ \ 0 < w < 1 \, .
+\end{equation}
+Since $\cos^{-1}(\sqrt{w})$ is a monotonically decreasing function on  $0 < w < 1$, 
+the probability density function for $w$ is 
+\begin{eqnarray}
+ 	g(w) &=& f ( \cos^{-1}(\sqrt{w}) ) \left| \frac{d}{dw} \cos^{-1}(\sqrt{w}) \right| \nonumber \\
+ 		&=& \frac{1}{\pi} \frac{1}{\sqrt{w - w^2}} 
+\end{eqnarray}
+The expected value of $w$ is
+\begin{equation}
+\langle w \rangle = \frac{1}{\pi}\int_0^1 \frac{1}{\sqrt{w - w^2}} \, dw = \frac{1}{2} = \langle \cos^2 \theta \rangle \, .
+\end{equation}
+Substitution into Eq. (\ref{eq:degennes}), we get the desired result $S=0$.
 
 \subsection*{The tricky counter-ion system}
 Section 6.2 deals with charged systems, and in 6.2.1 and 6.2.2 we investigate the 
@@ -153,6 +189,7 @@ and integrating we obtain
 	n_+ = n_*(e^{-q\varphi/k_BT} -1) \, .
 \end{equation}
 This is Eq. (6.66). 
+
 %\subsection*{On the perturbation analysis of mixtures in temperature gradients}
 
 \end{document}
