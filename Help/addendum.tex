@@ -65,40 +65,51 @@ This is Eq. (4.15) in the book, but again without the stochastic forcing term.
 
 
 \subsection*{The de Gennes order parameter}
-Equation (5.27) defines the de Gennes order parameter for three dimensions. In general dimensions it reads
+Equation (5.27) defines the de Gennes order parameter 
 \begin{equation}
 	\label{eq:degennes}
-	S = \frac{1}{2}(D \langle \cos^2(\theta)\rangle -1) \, ,
+	S = \frac{1}{2}(3 \langle \cos^2(\theta)\rangle -1) \, ,
 \end{equation}
-where $D$ is the system dimensionality, and 
-$\theta$ is the angle between the characteristic molecular vector and the wall normal vector. 
+where $\theta$ is the angle between the characteristic molecular vector and the wall normal vector. 
 (Not "the wall" as stated in the text - see erratum.) $S$ has the properties
 \begin{enumerate}
-\item $S=-1/2$: the molecular vectors are parallel to the wall
-\item $S= 1$: the molecular vectors are normal to the wall
-\item $S=0$: the molecular vectors are uniformly oriented. 
+	\item $S=-1/2$: the molecular vectors are (mostly) parallel to the wall
+	\item $S= 1$: the molecular vectors are (mostly) normal to the wall
+	\item $S=0$: the molecular vectors are uniformly oriented. 
 \end{enumerate}
-\noindent We here prove the last property for a two dimensional system, $D=2$; the two others can be proven following the same idea. 
 
-If the molecular vector is uniformly distributed, the probability density function is 
+\noindent We here prove the last property in two dimensions; the other properties can be found from same ideas. 
+In two dimensions, we let the molecular vector coordinate be given by $(x,z)$, and the $z$-axis is the normal to the wall 
+(as used in the book). Let the molecular vector length, $l_m$ be fixed; then the vector $x$-coordinate is found
+simply using $x = \sqrt{l_m^2 - z^2}$, such that $z^2 \leq l_m^2$ and $x \geq 0$. The uniformity pertains to the vector coordinates
+and (not the angle). Then, the probabilty density function for the $z$ vector coordinate is
 \begin{equation}
-	f(\theta) = \frac{2}{\pi} 1_A(\theta) \,  ,
+	f(z) = \frac{1}{2l_m} 1_A(z) \,  ,
 \end{equation}
-where $1_A$ is the indicator function on the domain $A= \{\theta : 0\leq \theta \leq \pi/2\}$. Let 
-\begin{equation} 
-	w = \cos^2 \theta \, \ \ \text{where} \ \ 0 < w < 1 \, .
-\end{equation}
-Since $\cos^{-1}(\sqrt{w})$ is a monotonically decreasing function on  $0 < w < 1$, 
-the probability density function for $w$ is 
+where $1_A$ is the indicator function on the domain 
+\[
+	A=\{z\in \mathbf{R} : -l_m \leq z \leq l_m\}. 
+\]
+The angle between the wall normal and the 
+molecular vector is then $\cos(\theta)=z/l_m$ or $\theta = cos^{-1}(z/l)$, where $0 \leq \theta \leq \pi$. Since the 
+inverse cosine function is monotonically decreasing, we find the probabilty density for $\theta$ (which is worth listing 
+as well)
 \begin{eqnarray}
- 	g(w) &=& f ( \cos^{-1}(\sqrt{w}) ) \left| \frac{d}{dw} \cos^{-1}(\sqrt{w}) \right| \nonumber \\
- 		&=& \frac{1}{\pi} \frac{1}{\sqrt{w - w^2}} 
+ 	g(\theta) &=& f ( l_m \cos(\theta) ) \left| \frac{d}{d\theta} l_m \cos(\theta) \right| \nonumber \\
+		&=& \frac{1}{2} \sin(\theta)
 \end{eqnarray}
-The expected value of $w$ is
+So the angle is sine-distributed. We are not after the angle distribution, but the distribution of $\cos^2 \theta$. Since
+we have the distribution for $\theta$ we can simply continue from here; let $w=\cos^2\theta$ ($ 0\leq w \leq 1$) for previty. 
+Then $\theta = \cos^{-1}(\sqrt{w})$ and
+\begin{eqnarray}
+	h(w) &=& f\left(\cos^{-1}(\sqrt{w})\right)\left| \frac{d}{dw} \cos^{-1}(\sqrt{w}) \right| \nonumber \\
+	&=& \frac{1}{2 \sqrt{w}}\, .
+\end{eqnarray}
+The expected value (or expectation value) of $w$ is
 \begin{equation}
-\langle w \rangle = \frac{1}{\pi}\int_0^1 \frac{1}{\sqrt{w - w^2}} \, dw = \frac{1}{2} = \langle \cos^2 \theta \rangle \, .
+\langle \cos^2 \theta \rangle = \langle w \rangle = \frac{1}{2}\int_0^1 \sqrt{w} \, dw = \frac{1}{3} 
 \end{equation}
-Substitution into Eq. (\ref{eq:degennes}), we get the desired result $S=0$.
+Substitution into Eq. (\ref{eq:degennes}) we get the desired result $S=0$.
 
 \subsection*{The tricky counter-ion system}
 Section 6.2 deals with charged systems, and in 6.2.1 and 6.2.2 we investigate the 
@@ -118,7 +129,8 @@ reference point to be at infinite, hence, the electric potential $\varphi$ fullf
 \label{eq:tc:potential}
  \varphi \rightarrow 0 \ \ \text{as} \ \ z \rightarrow \infty.
 \end{equation}
-See Griffith's book \emph{Introduction to Electrodynamics}, Chapter 2.   
+See Griffith's book \emph{Introduction to Electrodynamics}, Chapter 2. I final note here, the choice of
+reference potenital is not unique, of course, and e.g. Israelachvili chooses this differently. 
 
 Equation (6.66) is different from an electrolyte system, Eq. (6.45), composed of both co- and 
 counter-ions which may raise confusion. Here it is shown that Eq. (6.66) can be derived from the 
