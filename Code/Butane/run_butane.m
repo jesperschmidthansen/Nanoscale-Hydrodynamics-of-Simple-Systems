@@ -18,7 +18,7 @@ clear all;
 %% Simulation parameters
 temp0 = 4.0;
 dt  = 0.002;
-nloops = 1000000;
+nloops = 10000; % <- Small value for testing purpose, change when simulating
 
 %% Interaction specifications
 cutoff = 2.5; epsCC = 1.0; sigmaCC = 1.0; aw = 1.0;

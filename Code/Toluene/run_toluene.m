@@ -22,7 +22,7 @@ clear all;
 temp0 = 4.0;
 dens0 = 1.95;
 dt  = 0.001;
-nloops = 1000000;
+nloops = 10000;  % <- Small value for testing purpose, change when simulating
 nk = 10;
 
 %% Interaction specifications

@@ -18,7 +18,7 @@ clear all;
 temp0 = 2.0;
 dens0 = 0.85;
 
-nloops = 1000000;  %<- If you do not get 'good' data try to increase nloops
+nloops = 10000;  % <- Small value for testing purpose, change when simulating
 charge = false;
 q = 1.0;
 

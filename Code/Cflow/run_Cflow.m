@@ -22,7 +22,7 @@ clear all;
 
 %% Simulation parameters
 temp0 = 1.0;
-nloops = 1000000;
+nloops = 10000;  % <- Small value for testing purpose, change when simulating
 
 %% Interaction parameters (Change accordingly) 
 cutoffFF = 2.5; epsilonFF = 1.0; sigmaFF = 1.0; awFF = 1.0; 

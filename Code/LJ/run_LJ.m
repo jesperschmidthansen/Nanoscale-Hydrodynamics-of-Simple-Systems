@@ -31,7 +31,7 @@ end
 %% Simulation parameters
 temp = 1.2;
 dens = 0.8;
-nloops = 200000;
+nloops = 10000;  % <- Small value for testing purpose, change when simulating
 
 wavenumber = 5;  %% <- change
 sample_lvec = 200;
