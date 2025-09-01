@@ -1,5 +1,8 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \title{Erratum for \\ ''Nanoscale Hydrodynamics of Simple Liquids''}
 \date{}
 
@@ -17,9 +20,22 @@
 \end{itemize}
 
 \subsection*{Nanoscale Hydrodynamic Relaxations}
-\begin{itemize}
-\item Page 54, third line from top: This should read "to the spin angular momentum can be ignored; in the next chapter we return to the more"
-\end{itemize}
+	\begin{itemize}
+		\item Page 54, third line from top: This should read "to the spin angular momentum can be ignored; 
+			in the next chapter we return to the more \ldots"
+		\item Right-hand side of Eq. (3.22b) should be
+			\[
+				-\eta_0 \left(
+				\boldsymbol{\nabla}\bold{u} + (\boldsymbol{\nabla}\bold{u})^T - \frac{2}{3}
+				(\boldsymbol{\nabla} \cdot \bold{u}) \bold{I} 
+				\right) + \stackrel{os}{\delta \bold{P}}
+			\]
+		\item Right-hand side of Eq. (3.24a) should be
+			\[
+				\frac{1}{2} \nabla^2 \bold{u} + \frac{1}{6} \boldsymbol{\nabla}(\boldsymbol{\nabla} \cdot
+				\bold{u})	
+			\]
+	\end{itemize}
 
 \subsection*{Extensions to Classical Hydrodynamics}
 \begin{itemize}
@@ -28,6 +44,8 @@
 		tranverse dipole moment autocorrelation function. The predicted dynamics 
 		follow the same exponential functional form, hence, the extracted parameter 
 		values are the same for the longitudinal and tranverse relaxations. See Ref. [100].
+		%The dispersion relation for the longitudinal dipole moment autocorrelation is discussed in
+		%\ldots
 \end{itemize}
 
 \subsection*{Simple Nanoscale Flows}
